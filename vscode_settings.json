@@ -1,0 +1,92 @@
+{   
+    "editor.tokenColorCustomizations": {
+        "variables": "#ffffff",
+        "comments": "#bababa",
+        "strings": "#ededed",
+        "keywords": "#fafa0b",
+        "functions": "#ffffff",
+        "types": "#ffffff",
+        "numbers": "#ffffff",
+        "textMateRules": [
+        {
+            "scope": ["constant.language", "storage.modifier.async.tsx"],
+            "settings": {
+            "foreground": "#00ee00"
+            }
+        },
+        {
+            "scope": ["punctuation.definition.parameters.end.tsx"],
+            "settings": {
+            "foreground": "#bababa"
+            }
+        }
+        ]
+    },
+    "workbench.colorCustomizations": {
+        "inlineChat.background": "#ff0000",
+        "statusBarItem.activeBackground": "#ff0000",
+        "statusBar.focusBorder": "#ff0000",
+        "statusBar.debuggingBorder": "#ff0000",
+        "statusBar.noFolderBorder": "#ff0000",
+        "banner.background": "#00ff00",
+        "button.background": "#00ff00",
+        "checkbox.background": "#00ff00",
+        "dropdown.background": "#00ff00",
+        "editorInfo.background": "#00ff00",
+        "outputView.background": "#0000ff",
+        "progressBar.background": "#0000ff",
+        "editorCursor.background": "#0000ff",
+        "debugToolBar.background": "#0000ff",
+        "profileBadge.background": "#0000ff",
+        
+        // primary color
+        "quickInput.background":          "#181818", // command pallette
+        "sideBarTitle.background":        "#181818", // thing that lets you create a new file and folder
+        "editorWidget.background":        "#181818",
+        "welcomePage.background":         "#181818",
+        "breadcrumb.background":          "#181818", // absolute file path right under the tabs    
+        "panel.background":               "#181818", // top of the bottom panel that has the terminal tab
+        "editor.background":              "#181818", // background of the code
+        "minimap.background":             "#181818",
+        "editorPane.background":          "#181818", // sides of the editor in zen mode
+        "terminal.background":            "#181818",
+        "statusBar.border":               "#181818", // border of the thing at the bottom that shows newline type and language
+        "activityBar.background":         "#181818", // side panel thing with Explorer and Find/Replace 
+        "tab.activeBackground":           "#181818",
+        "tab.inactiveBackground":         "#181818",
+        "editorGutter.background":        "#181818",
+        "sideBarSectionHeader.background":"#181818",
+        "input.background":               "#181818",
+        "badge.background":               "#181818",
+        "sideBar.background":             "#181818",
+        
+        // primary-contrast color
+        "editor.foreground":            "#ffffff",
+        
+        // primary-hover
+        "list.dropBackground":  "#282828",
+        "list.hoverBackground": "#282828",
+        "tab.hoverBackground":  "#282828",
+
+        // primary-selection
+        "list.focusBackground": "#424242",
+        "selection.background": "#424242",
+
+        // secondary color
+        "menu.background":               "#000000",
+        "statusBar.background":          "#000000",
+        "statusBar.debuggingBackground": "#000000",
+        "statusBar.noFolderBackground":  "#000000",
+        
+        // secondary-contrast color
+        "input.border":                 "#bababa",
+        "badge.foreground":             "#bababa",
+        "menu.foreground":              "#bababa",
+        "statusBar.debuggingForeground":"#bababa",
+        "statusBar.noFolderForeground": "#bababa",
+        "statusBar.foreground":         "#bababa",
+
+        // error color
+        "editorError.background": "#ff000060"
+    }
+}
