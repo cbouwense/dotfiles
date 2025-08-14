@@ -1,81 +1,217 @@
-{   
-    "editor.tokenColorCustomizations": {
-        // primary
-        "variables": "#ffffff",
-        "functions": "#ffffff",
-        "types":     "#ffffff",
-        "numbers":   "#ffffff",
-        
-        // secondary
-        "strings": "#ededed",
-
-        // soft
-        "comments": "#bababa",
-
-        // yellow
-        "keywords": "#fafa0b",
-
-        "textMateRules": [
-        {
-            "scope": ["constant.language", "storage.modifier.async.tsx"],
-            "settings": {
-            "foreground": "#00ee00"
-            }
+{
+    "workbench.startupEditor": "none",
+    "terminal.integrated.defaultProfile.windows": "Debian (WSL)",
+    "editor.stickyScroll.enabled": false,
+    "terminal.integrated.profiles.windows": {
+        "MinGW": {
+            "path": "C:\\raylib\\w64devkit\\w64devkit.exe",
         },
-        {
-            "scope": ["punctuation.definition.parameters.end.tsx"],
-            "settings": {
-            "foreground": "#bababa"
-            }
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Debian (WSL)": {
+            "path": "C:\\Windows\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Debian"
+            ]
         }
+    },
+    "codeium.enableConfig": {
+        "*": false,
+        "c": false
+    },
+    "editor.bracketPairColorization.enabled": false,
+    // Light mode
+    // "editor.tokenColorCustomizations": {
+    //     "variables": "#000000",
+    //     "comments": "#181818",
+    //     "strings": "#181818",
+    //     "keywords": "#0b0bfa",  // blue
+    //     "functions": "#000000",
+    //     "types": "#000000",
+    //     "numbers": "#000000",
+    //     "textMateRules": [
+    //     {
+    //         "scope": ["constant.language", "storage.modifier.async.tsx"],
+    //         "settings": {
+    //             "foreground": "#0b0bfa"
+    //         }
+    //     },
+    //     {
+    //         "scope": ["punctuation.definition.parameters.end.tsx"],
+    //         "settings": {
+    //         "foreground": "#bababa"
+    //         }
+    //     }
+    //     ]
+    // },
+    // "workbench.colorCustomizations": {
+    //     // yet unknown elements
+    //     "inlineChat.background": "#ff0000",
+    //     "statusBarItem.activeBackground": "#ff0000",
+    //     "statusBar.focusBorder": "#ff0000",
+    //     "statusBar.debuggingBorder": "#ff0000",
+    //     "statusBar.noFolderBorder": "#ff0000",
+    //     "banner.background": "#00ff00",
+    //     "button.background": "#00ff00",
+    //     "checkbox.background": "#00ff00",
+    //     "dropdown.background": "#00ff00",
+    //     "editorInfo.background": "#00ff00",
+    //     "outputView.background": "#0000ff",
+    //     "progressBar.background": "#0000ff",
+    //     "editorCursor.background": "#0000ff",
+    //     "debugToolBar.background": "#0000ff",
+    //     "profileBadge.background": "#0000ff",
+        
+    //     // primary color
+    //     "quickInput.background":          "#ffffff", // command pallette
+    //     "sideBarTitle.background":        "#ffffff", // thing that lets you create a new file and folder
+    //     "editorWidget.background":        "#ffffff",
+    //     "welcomePage.background":         "#ffffff",
+    //     "breadcrumb.background":          "#ffffff", // absolute file path right under the tabs    
+    //     "panel.background":               "#ffffff", // top of the bottom panel that has the terminal tab
+    //     "editor.background":              "#ffffff", // background of the code
+    //     "minimap.background":             "#ffffff",
+    //     "editorPane.background":          "#ffffff", // sides of the editor in zen mode
+    //     "terminal.background":            "#ffffff",
+    //     "statusBar.border":               "#ffffff", // border of the thing at the bottom that shows newline type and language
+    //     "activityBar.background":         "#ffffff", // side panel thing with Explorer and Find/Replace 
+    //     "tab.activeBackground":           "#ffffff",
+    //     "tab.inactiveBackground":         "#ffffff",
+    //     "editorGutter.background":        "#ffffff",
+    //     "sideBarSectionHeader.background":"#ffffff",
+    //     "input.background":               "#ffffff",
+    //     "badge.background":               "#ffffff",
+    //     "sideBar.background":             "#ffffff",
+        
+    //     // primary-contrast color
+    //     "foreground": "#000000",
+    //     "editor.foreground": "#000000",
+    //     "tab.activeForeground": "#000000",
+    //     "tab.inactiveForeground": "#000000",
+    //     "tab.selectedForeground": "#000000",
+        
+    //     // primary-hover
+    //     "list.dropBackground":  "#efefef",
+    //     "list.hoverBackground": "#efefef",
+    //     "tab.hoverBackground":  "#efefef",
+
+    //     // primary-selection
+    //     "list.focusBackground":           "#dedede",
+    //     "selection.background":           "#dedede",
+    //     "editor.selectionBackground":     "#dedede",
+    //     "editor.lineHighlightBackground": "#dedede",
+
+    //     // secondary color
+    //     "menu.background":               "#fefefe",
+    //     "statusBar.background":          "#fefefe",
+    //     "statusBar.debuggingBackground": "#fefefe",
+    //     "statusBar.noFolderBackground":  "#fefefe",
+        
+    //     // secondary-contrast color
+    //     "input.border":                 "#181818",
+    //     "badge.foreground":             "#181818",
+    //     "menu.foreground":              "#181818",
+    //     "statusBar.debuggingForeground":"#181818",
+    //     "statusBar.noFolderForeground": "#181818",
+    //     "statusBar.foreground":         "#181818",
+
+    //     // error color
+    //     "editorError.background": "#ff000042", 
+    // },
+
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+        "enum": "#000000",
+        "enumMember": "#000000",
+        "variable.defaultLibrary": "#fafa0b",
+        }
+    },
+    // Dark mode
+    "editor.tokenColorCustomizations": {
+        "variables": "#ffffff",
+        "comments": "#bababa",
+        "strings": "#ededed",
+        "keywords": "#fafa0b",  // yellow
+        "functions": "#ffffff",
+        "types": "#ffffff",
+        "numbers": "#ffffff",
+        "textMateRules": [
+            {
+                "scope": ["constant.language", "storage.modifier.async.tsx"],
+                "settings": {
+                    "foreground": "#fafa0b"
+                }
+            },
+            {
+                "scope": ["punctuation.definition.parameters.end.tsx"],
+                "settings": {
+                    "foreground": "#bababa"
+                }
+            }
         ]
     },
     "workbench.colorCustomizations": {
-        // as-yet unknown elements
-        "inlineChat.background":          "#ff0000",
+        // yet unknown elements
+        "inlineChat.background": "#ff0000",
         "statusBarItem.activeBackground": "#ff0000",
-        "statusBar.focusBorder":          "#ff0000",
-        "statusBar.debuggingBorder":      "#ff0000",
-        "statusBar.noFolderBorder":       "#ff0000",
-        "banner.background":              "#00ff00",
-        "button.background":              "#00ff00",
-        "checkbox.background":            "#00ff00",
-        "dropdown.background":            "#00ff00",
-        "editorInfo.background":          "#00ff00",
-        "outputView.background":          "#0000ff",
-        "progressBar.background":         "#0000ff",
-        "editorCursor.background":        "#0000ff",
-        "debugToolBar.background":        "#0000ff",
-        "profileBadge.background":        "#0000ff",
+        "statusBar.focusBorder": "#ff0000",
+        "statusBar.debuggingBorder": "#ff0000",
+        "statusBar.noFolderBorder": "#ff0000",
+        "banner.background": "#00ff00",
+        // "button.background": "#00ff00",
+        "checkbox.background": "#00ff00",
+        "dropdown.background": "#00ff00",
+        "editorInfo.background": "#00ff00",
+        "outputView.background": "#0000ff",
+        "progressBar.background": "#0000ff",
+        "editorCursor.background": "#0000ff",
+        "debugToolBar.background": "#0000ff",
+        "profileBadge.background": "#0000ff",
         
         // primary color
-        "quickInput.background":           "#181818", // command pallette
-        "sideBarTitle.background":         "#181818", // thing that lets you create a new file and folder
-        "editorWidget.background":         "#181818",
-        "welcomePage.background":          "#181818",
-        "breadcrumb.background":           "#181818", // absolute file path right under the tabs    
-        "panel.background":                "#181818", // top of the bottom panel that has the terminal tab
-        "editor.background":               "#181818", // background of the code
-        "minimap.background":              "#181818",
-        "editorPane.background":           "#181818", // sides of the editor in zen mode
-        "terminal.background":             "#181818",
-        "statusBar.border":                "#181818", // border of the thing at the bottom that shows newline type and language
-        "activityBar.background":          "#181818", // side panel thing with Explorer and Find/Replace 
-        "tab.activeBackground":            "#181818",
-        "tab.inactiveBackground":          "#181818",
-        "editorGutter.background":         "#181818",
-        "sideBarSectionHeader.background": "#181818",
-        "input.background":                "#181818",
-        "badge.background":                "#181818",
-        "sideBar.background":              "#181818",
+        "quickInput.background":          "#181818", // command pallette
+        "sideBarTitle.background":        "#181818", // thing that lets you create a new file and folder
+        "editorWidget.background":        "#181818",
+        "welcomePage.background":         "#181818",
+        "breadcrumb.background":          "#181818", // absolute file path right under the tabs    
+        "panel.background":               "#181818", // top of the bottom panel that has the terminal tab
+        "editor.background":              "#181818", // background of the code
+        "minimap.background":             "#181818",
+        "editorPane.background":          "#181818", // sides of the editor in zen mode
+        "terminal.background":            "#181818",
+        "statusBar.border":               "#181818", // border of the thing at the bottom that shows newline type and language
+        "activityBar.background":         "#181818", // side panel thing with Explorer and Find/Replace 
+        "tab.activeBackground":           "#181818",
+        "tab.inactiveBackground":         "#181818",
+        "editorGutter.background":        "#181818",
+        "sideBarSectionHeader.background":"#181818",
+        "input.background":               "#181818",
+        "badge.background":               "#181818",
+        "sideBar.background":             "#181818",
         
         // primary-contrast color
-        "editor.foreground": "#ffffff",
+        "editor.foreground":            "#ffffff",
         
         // primary-hover
         "list.dropBackground":  "#282828",
         "list.hoverBackground": "#282828",
         "tab.hoverBackground":  "#282828",
+        "button.background":    "#282828",
 
         // primary-selection
         "list.focusBackground": "#424242",
@@ -88,14 +224,30 @@
         "statusBar.noFolderBackground":  "#000000",
         
         // secondary-contrast color
-        "input.border":                  "#bababa",
-        "badge.foreground":              "#bababa",
-        "menu.foreground":               "#bababa",
-        "statusBar.debuggingForeground": "#bababa",
-        "statusBar.noFolderForeground":  "#bababa",
-        "statusBar.foreground":          "#bababa",
+        "input.border":                 "#bababa",
+        "badge.foreground":             "#bababa",
+        "menu.foreground":              "#bababa",
+        "statusBar.debuggingForeground":"#bababa",
+        "statusBar.noFolderForeground": "#bababa",
+        "statusBar.foreground":         "#bababa",
 
         // error color
-        "editorError.background": "#ff000060"
-    }
+        "editorError.background": "#ff000060",        
+    },
+    "rust-analyzer.inlayHints.genericParameterHints.const.enable": false,
+    "files.eol": "\n",
+    "codeium.enableCodeLens": false,
+    "workbench.layoutControl.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "lldb.suppressUpdateNotifications": true,
+    "files.associations": {
+        "*.jai": "java"
+    },
+    "editor.wordWrap": "on",
+    "zenMode.centerLayout": false,
+    "editor.minimap.enabled": false,
+    "clangd.path": "c:\\Users\\bouwe\\AppData\\Roaming\\VSCodium\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\20.1.8\\clangd_20.1.8\\bin\\clangd.exe",
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle"
 }
